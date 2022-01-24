@@ -1,0 +1,172 @@
+{
+	"name": "symfony-annotation",
+	"displayName": "Symfony Annotation",
+	"description": "Autocomplete annotation in Symfony app",
+	"version": "1.0.0",
+	"license": "MIT",
+	"publisher": "jauneloke",
+	"author": "Jaune Loke",
+	"engines": {
+		"vscode": "^1.60.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"keywords": [
+		"php",
+		"autocomplete",
+		"symfony"
+	],
+	"activationEvents": [
+		"onLanguage:php",
+		"onLanguage:hack"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/JauneLoke/vscode-symfony-annotation"
+	},
+	"capabilities": {
+		"untrustedWorkspaces": {
+			"supported": true
+		}
+	},
+	"extensionKind": [
+		"workspace",
+		"ui"
+	],
+	"icon": "images/logo.png",
+	"browser": "./out/src/extension.js",
+	"main": "./out/src/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "symfony-annotation.trigger",
+				"title": "Insert PHP Annotation"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "PHP symfony-annotation",
+			"properties": {
+				"symfony-annotation.gap": {
+					"type": "boolean",
+					"default": true,
+					"description": "If there should be a gap between the description and tags"
+				},
+				"symfony-annotation.returnGap": {
+					"type": "boolean",
+					"default": false,
+					"description": "If there should be a gap between params and return"
+				},
+				"symfony-annotation.returnVoid": {
+					"type": "boolean",
+					"default": true,
+					"description": "Should we return void if there is no detectable return type?"
+				},
+				"symfony-annotation.extra": {
+					"type": "array",
+					"default": [],
+					"description": "Extra tags you wish to include in every symfony doc bloc"
+				},
+				"symfony-annotation.useShortNames": {
+					"type": "boolean",
+					"default": false,
+					"description": "Whether you want to use int instead of integer and bool instead of boolean."
+				},
+				"symfony-annotation.qualifyClassNames": {
+					"type": "boolean",
+					"default": false,
+					"description": "Fully qualifies any data types used in param and returns by reading the namespaces."
+				},
+				"symfony-annotation.alignParams": {
+					"type": "boolean",
+					"default": false,
+					"description": "Vertically aligns param types and names with additional spaces."
+				},
+				"symfony-annotation.alignReturn": {
+					"type": "boolean",
+					"default": false,
+					"description": "Vertically aligns return with above param statements."
+				},
+				"symfony-annotation.varDescription": {
+					"type": [
+						"string",
+						"boolean"
+					],
+					"default": false,
+					"description": "Include a description placeholder for @var tags"
+				},
+				"symfony-annotation.paramDescription": {
+					"type": [
+						"string",
+						"boolean"
+					],
+					"default": false,
+					"description": "Include a description placeholder for @param tags"
+				},
+				"symfony-annotation.returnDescription": {
+					"type": [
+						"string",
+						"boolean"
+					],
+					"default": false,
+					"description": "Include a description placeholder for @return tags"
+				},
+				"symfony-annotation.functionTemplate": {
+					"type": "object",
+					"default": null,
+					"description": "Specify the default template for functions."
+				},
+				"symfony-annotation.propertyTemplate": {
+					"type": "object",
+					"default": null,
+					"description": "Specify the default template for class variables."
+				},
+				"symfony-annotation.classTemplate": {
+					"type": "object",
+					"default": null,
+					"description": "Specify the default template for classes."
+				},
+				"symfony-annotation.author": {
+					"type": "object",
+					"default": {
+						"name": "Name",
+						"email": "email@email.com"
+					},
+					"description": "Default author tag"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"verify-pat": "vsce verify-pat",
+		"vscode:prepublish": "npm run -S esbuild-base -- --minify",
+		"lint": "tslint -p ./",
+		"build": "npm run -S esbuild-base -- --sourcemap",
+		"watch": "tsc -watch -p ./",
+		"pretest": "tsc -p ./",
+		"preversion": "tsc -p ./",
+		"version": "node ./out/scripts/updateChangelog.js",
+		"test": "node ./out/test/runTest.js",
+		"web": "npm run build && vscode-test-web --browserType=webkit --extensionDevelopmentPath=./",
+		"esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/src/extension.js --external:vscode --format=cjs --platform=node",
+		"package": "vsce package --out ./out/package.vsix",
+		"publish": "vsce publish --packagePath ./out/package.vsix",
+		"deploy": "npm run package && npm run publish"
+	},
+	"devDependencies": {
+		"@types/mocha": "^5.2.6",
+		"@types/node": "^6.14.13",
+		"@types/vscode": "^1.60.0",
+		"@vscode/test-web": "^0.0.7",
+		"coveralls": "^3.1.1",
+		"esbuild": "^0.12.29",
+		"markdown-table-ts": "^1.0.3",
+		"mocha": "^9.1.1",
+		"nyc": "^15.0.0",
+		"typescript": "^3.9.10",
+		"vsce": "^1.100.0",
+		"vscode-test": "^1.6.1"
+	},
+	"dependencies": {}
+}

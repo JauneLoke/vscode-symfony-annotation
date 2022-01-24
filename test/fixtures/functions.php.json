@@ -1,0 +1,736 @@
+[
+    {
+        "key": "simple",
+        "name": "Simple public",
+        "result": {
+            "return": "void",
+            "params": []
+        }
+    },
+    {
+        "key": "simple-static",
+        "name": "Simple public static",
+        "result": {
+            "return": "void",
+            "params": []
+        }
+    },
+    {
+        "key": "constructor-no-vis",
+        "name": "Constructor with no visibility",
+        "result": {
+            "return": null,
+            "params": []
+        }
+    },
+    {
+        "key": "abstract-simple",
+        "name": "Abstract method simple",
+        "result": {
+            "return": "void",
+            "params": []
+        }
+    },
+    {
+        "key": "abstract-static",
+        "name": "Abstract method static",
+        "result": {
+            "return": "void",
+            "params": []
+        }
+    },
+    {
+        "key": "abstract-static-alt",
+        "name": "Abstract method static alternate",
+        "result": {
+            "return": "void",
+            "params": []
+        }
+    },
+    {
+        "key": "final-static",
+        "name": "Final static method",
+        "result": {
+            "return": "void",
+            "params": []
+        }
+    },
+    {
+        "key": "final",
+        "name": "Final method",
+        "config": {
+            "qualifyClassNames": true
+        },
+        "result": {
+            "return": "void",
+            "params": []
+        }
+    },
+    {
+        "key": "params",
+        "name": "Basic params",
+        "config": {
+            "qualifyClassNames": true
+        },
+        "result": {
+            "return": "void",
+            "params": [
+                {
+                    "name": "$var",
+                    "type": "[type]"
+                },
+                {
+                    "name": "$var2",
+                    "type": "[type]"
+                },
+                {
+                    "name": "$var3",
+                    "type": "[type]"
+                }
+            ]
+        }
+    },
+    {
+        "key": "params-complex",
+        "name": "Complex params",
+        "result": {
+            "return": "void",
+            "params": [
+                {
+                    "name": "$var",
+                    "type": "[type]"
+                },
+                {
+                    "name": "$var2",
+                    "type": "Hint"
+                },
+                {
+                    "name": "$var3",
+                    "type": "boolean"
+                }
+            ]
+        }
+    },
+    {
+        "key": "multiline",
+        "name": "Basic Multiline",
+        "result": {
+            "return": "void",
+            "params": [
+                {
+                    "name": "$var",
+                    "type": "[type]"
+                },
+                {
+                    "name": "$var2",
+                    "type": "[type]"
+                },
+                {
+                    "name": "$var3",
+                    "type": "[type]"
+                }
+            ]
+        }
+    },
+    {
+        "key": "multiline-complex",
+        "name": "Complex Multiline",
+        "result": {
+            "return": "void",
+            "params": [
+                {
+                    "name": "$var",
+                    "type": "TypeHint"
+                },
+                {
+                    "name": "$var2",
+                    "type": "[type]"
+                },
+                {
+                    "name": "$var3",
+                    "type": "string"
+                }
+            ]
+        }
+    },
+    {
+        "key": "array-params",
+        "name": "Complex Array params",
+        "result": {
+            "return": "void",
+            "params": [
+                {
+                    "name": "$var",
+                    "type": "array"
+                },
+                {
+                    "name": "$var2",
+                    "type": "array"
+                }
+            ]
+        }
+    },
+    {
+        "key": "nullable-return-type",
+        "name": "Nullable return type",
+        "result": {
+            "return": "string|null",
+            "params": []
+        }
+    },
+    {
+        "key": "nullable-args",
+        "name": "Nullable args",
+        "result": {
+            "return": "void",
+            "params": [
+                {
+                    "name": "$var",
+                    "type": "TypeHint|null"
+                },
+                {
+                    "name": "$var2",
+                    "type": "\\Type2|null"
+                },
+                {
+                    "name": "$var3",
+                    "type": "string|null"
+                }
+            ]
+        }
+    },
+    {
+        "key": "param-types",
+        "name": "All param types",
+        "result": {
+            "return": "void",
+            "params": [
+                {
+                    "name": "$hint",
+                    "type": "TypeHint"
+                },
+                {
+                    "name": "$boolean",
+                    "type": "boolean"
+                },
+                {
+                    "name": "$string",
+                    "type": "string"
+                },
+                {
+                    "name": "$string2",
+                    "type": "string"
+                },
+                {
+                    "name": "$int",
+                    "type": "integer"
+                },
+                {
+                    "name": "$float",
+                    "type": "float"
+                },
+                {
+                    "name": "$array",
+                    "type": "array"
+                },
+                {
+                    "name": "$array2",
+                    "type": "array"
+                }
+            ]
+        }
+    },
+    {
+        "key": "param-namespace",
+        "name": "Param with namespaced typehint",
+        "result": {
+            "return": "void",
+            "params": [
+                {
+                    "name": "$hint",
+                    "type": "\\TypeHint"
+                },
+
+                {
+                    "name": "$test",
+                    "type": "[type]"
+                }
+            ]
+        }
+    },
+    {
+        "key": "param-namespace-full",
+        "name": "Param with fully namespaced typehint",
+        "result": {
+            "return": "void",
+            "params": [
+                {
+                    "name": "$hint",
+                    "type": "App\\Model\\TypeHint"
+                },
+
+                {
+                    "name": "$test",
+                    "type": "[type]"
+                }
+            ]
+        }
+    },
+    {
+        "key": "param-default-null",
+        "name": "Param with default null",
+        "result": {
+            "return": "void",
+            "params": [
+                {
+                    "name": "$arg",
+                    "type": "integer|null"
+                }
+            ]
+        }
+    },
+    {
+        "key": "param-mixed-default-null",
+        "name": "Param with mixed and default null",
+        "result": {
+            "return": "void",
+            "params": [
+                {
+                    "name": "$arg",
+                    "type": "mixed"
+                }
+            ]
+        }
+    },
+    {
+        "key": "args",
+        "name": "Argument with ...$args",
+        "result": {
+            "return": "void",
+            "params": [
+                {
+                    "name": "...$args",
+                    "type": "[type]"
+                }
+            ]
+        }
+    },
+    {
+        "key": "args-typed",
+        "name": "Arguments with ...$args that are typed",
+        "config": {
+            "useShortNames": true
+        },
+        "result": {
+            "return": "void",
+            "params": [
+                {
+                    "name": "...$args",
+                    "type": "int"
+                }
+            ]
+        }
+    },
+    {
+        "key": "args-typed-long",
+        "name": "Arguments with ...$args that are typed long form",
+        "result": {
+            "return": "void",
+            "params": [
+                {
+                    "name": "...$args",
+                    "type": "integer"
+                }
+            ]
+        }
+    },
+    {
+        "key": "php7-return",
+        "name": "PHP7 return type",
+        "result": {
+            "return": "TypeHint",
+            "params": []
+        }
+    },
+    {
+        "key": "php7-return-snake",
+        "name": "PHP7 return snake case",
+        "result": {
+            "return": "Type_Hint3",
+            "params": []
+        }
+    },
+    {
+        "key": "php7-return-alt",
+        "name": "PHP7 return type alternate",
+        "config": {
+            "qualifyClassNames": true
+        },
+        "result": {
+            "return": "float",
+            "params": []
+        }
+    },
+    {
+        "key": "php7-return-namespace",
+        "name": "PHP7 return namespace type",
+        "result": {
+            "return": "\\TypeHint",
+            "params": []
+        }
+    },
+    {
+        "key": "php7-return-namespace-full",
+        "name": "PHP7 return namespace type",
+        "result": {
+            "return": "App\\Model\\TypeHint",
+            "params": []
+        }
+    },
+    {
+        "key": "php8-return-union-types",
+        "name": "PHP8 return union types",
+        "result": {
+            "return": "integer|boolean|\\TypeHint|App\\Model\\TypeHint",
+            "params": []
+        }
+    },
+    {
+        "key": "php8-return-union-types-with-short-name",
+        "name": "PHP8 return union types with short-name",
+        "config": {
+            "useShortNames": true
+        },
+        "result": {
+            "return": "int|bool|\\TypeHint|App\\Model\\TypeHint",
+            "params": []
+        }
+    },
+    {
+        "key": "php8-param-union-types",
+        "name": "PHP8 param union types",
+        "config": {
+            "useShortNames": true
+        },
+        "result": {
+            "return": "void",
+            "params": [
+                {
+                    "name": "$arg",
+                    "type": "int|bool|\\TypeHint|App\\Model\\TypeHint"
+                },
+                {
+                    "name": "...$args",
+                    "type": "string|\\Closure"
+                }
+            ]
+        }
+    },
+    {
+        "key": "php8-constructor-promotion",
+        "name": "Constructor with promotion",
+        "result": {
+            "return": null,
+            "params": [
+                {
+                    "name": "$arg1",
+                    "type": "[type]"
+                },
+                {
+                    "name": "$arg2",
+                    "type": "integer"
+                },
+                {
+                    "name": "$arg3",
+                    "type": "integer|null"
+                },
+                {
+                    "name": "$arg4",
+                    "type": "string"
+                }
+            ]
+        }
+    },
+    {
+        "key": "trailing-comma",
+        "name": "Trailing comma after params",
+        "result": {
+            "return": "void",
+            "params": [
+                {
+                    "name": "$var",
+                    "type": "integer"
+                },
+                {
+                    "name": "$var2",
+                    "type": "string"
+                }
+            ]
+        }
+    },
+    {
+        "key": "trailing-comma-multi",
+        "name": "Trailing comma after params multi-line",
+        "result": {
+            "return": "void",
+            "params": [
+                {
+                    "name": "$var",
+                    "type": "integer"
+                },
+                {
+                    "name": "$var2",
+                    "type": "Class_Name"
+                }
+            ]
+        }
+    },
+    {
+        "key": "function-reference",
+        "name": "Function with reference ampersand",
+        "result": {
+            "return": "void",
+            "params": []
+        }
+    },
+    {
+        "key": "php7-return-param",
+        "name": "PHP7 return type with param",
+        "config": {
+            "useShortNames": true
+        },
+        "result": {
+            "return": "int",
+            "params": [
+                {
+                    "name": "$param",
+                    "type": "float"
+                }
+            ]
+        }
+    },
+    {
+        "key": "php7-return-param-long",
+        "name": "PHP7 return type with param long form",
+        "config": {
+            "qualifyClassNames": true
+        },
+        "result": {
+            "return": "integer",
+            "params": [
+                {
+                    "name": "$param",
+                    "type": "float"
+                }
+            ]
+        }
+    },
+    {
+        "key": "php7-return-multiline",
+        "name": "PHP7 return type multi-line",
+        "config": {
+            "useShortNames": true
+        },
+        "result": {
+            "return": "int",
+            "params": [
+                {
+                    "name": "$param",
+                    "type": "float"
+                },
+                {
+                    "name": "$boolean",
+                    "type": "bool"
+                }
+            ]
+        }
+    },
+    {
+        "key": "php7-return-multiline-long",
+        "name": "PHP7 return type multi-line long from",
+        "result": {
+            "return": "integer",
+            "params": [
+                {
+                    "name": "$param",
+                    "type": "float"
+                },
+                {
+                    "name": "$boolean",
+                    "type": "boolean"
+                }
+            ]
+        }
+    },
+    {
+        "key": "is",
+        "name": "Check is prefix",
+        "result": {
+            "return": "boolean",
+            "params": []
+        }
+    },
+    {
+        "key": "is-void",
+        "name": "Check is prefix - void",
+        "result": {
+            "return": "void",
+            "params": []
+        }
+    },
+    {
+        "key": "is-only",
+        "name": "Check is prefix - only",
+        "result": {
+            "return": "boolean",
+            "params": []
+        }
+    },
+    {
+        "key": "has",
+        "name": "Check has prefix",
+        "result": {
+            "return": "boolean",
+            "params": []
+        }
+    },
+    {
+        "key": "has-void",
+        "name": "Check has prefix - void",
+        "result": {
+            "return": "void",
+            "params": []
+        }
+    },
+    {
+        "key": "has-only",
+        "name": "Check has prefix - only",
+        "result": {
+            "return": "boolean",
+            "params": []
+        }
+    },
+    {
+        "key": "can",
+        "name": "Check can prefix",
+        "result": {
+            "return": "boolean",
+            "params": []
+        }
+    },
+    {
+        "key": "can-void",
+        "name": "Check can prefix - void",
+        "result": {
+            "return": "void",
+            "params": []
+        }
+    },
+    {
+        "key": "can-only",
+        "name": "Check can prefix - only",
+        "result": {
+            "return": "boolean",
+            "params": []
+        }
+    },
+    {
+        "key": "should",
+        "name": "Check should prefix",
+        "result": {
+            "return": "boolean",
+            "params": []
+        }
+    },
+    {
+        "key": "should-void",
+        "name": "Check should prefix - void",
+        "result": {
+            "return": "void",
+            "params": []
+        }
+    },
+    {
+        "key": "should-only",
+        "name": "Check should prefix - only",
+        "result": {
+            "return": "boolean",
+            "params": []
+        }
+    },
+    {
+        "key": "debug-info",
+        "name": "Debug info return type",
+        "result": {
+            "return": "array",
+            "params": []
+        }
+    },
+    {
+        "key": "sleep",
+        "name": "Magic sleep return type",
+        "result": {
+            "return": "array",
+            "params": []
+        }
+    },
+    {
+        "key": "wakeup",
+        "name": "Magic wakeup return type",
+        "result": {
+            "return": null,
+            "params": []
+        }
+    },
+    {
+        "key": "isset",
+        "name": "isset return type",
+        "result": {
+            "return": "boolean",
+            "params": [
+                {
+                    "name": "$name",
+                    "type": "[type]"
+                }
+            ]
+        }
+    },
+    {
+        "key": "to-string",
+        "name": "toString return type",
+        "result": {
+            "return": "string",
+            "params": []
+        }
+    },
+    {
+        "key": "set",
+        "name": "Magic set",
+        "result": {
+            "return": null,
+            "params": [
+                {
+                    "name": "$name",
+                    "type": "[type]"
+                },
+                {
+                    "name": "$value",
+                    "type": "[type]"
+                }
+            ]
+        }
+    },
+    {
+        "key": "unset",
+        "name": "unset return type",
+        "result": {
+            "return": null,
+            "params": [
+                {
+                    "name": "$name",
+                    "type": "[type]"
+                }
+            ]
+        }
+    }
+]

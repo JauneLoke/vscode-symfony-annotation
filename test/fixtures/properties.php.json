@@ -1,0 +1,145 @@
+[
+    {
+        "key": "public",
+        "name": "Public",
+        "var": "[type]"
+    },
+    {
+        "key": "protected",
+        "name": "Protected",
+        "var": "[type]"
+    },
+    {
+        "key": "static",
+        "name": "Static",
+        "var": "[type]"
+    },
+    {
+        "key": "static-alternate",
+        "name": "Static Alternate",
+        "var": "[type]"
+    },
+    {
+        "key": "default-string",
+        "name": "Default String",
+        "var": "string"
+    },
+    {
+        "key": "default-string-alternate",
+        "name": "Default String Alternate",
+        "var": "string"
+    },
+    {
+        "key": "default-bool",
+        "name": "Default Bool",
+        "var": "boolean"
+    },
+    {
+        "key": "default-bool-alternate",
+        "name": "Default Bool Alternate",
+        "var": "boolean"
+    },
+    {
+        "key": "default-array",
+        "name": "Default Array",
+        "var": "array"
+    },
+    {
+        "key": "default-array-alternate",
+        "name": "Default Array Alternate",
+        "var": "array"
+    },
+    {
+        "key": "multiline",
+        "name": "Multiline",
+        "var": "array"
+    },
+    {
+        "key": "multiline-alternate",
+        "name": "Multiline Alternate",
+        "var": "array"
+    },
+    {
+        "key": "default-float",
+        "name": "Default Float",
+        "var": "float"
+    },
+    {
+        "key": "default-int",
+        "name": "Default Int",
+        "var": "integer"
+    },
+    {
+        "key": "default-null",
+        "name": "Default Null",
+        "var": "[type]"
+    },
+    {
+        "key": "typed-string",
+        "name": "Typed string",
+        "var": "string"
+    },
+    {
+        "key": "typed-int",
+        "name": "Typed Int",
+        "var": "integer"
+    },
+    {
+        "key": "typed-interface",
+        "name": "Typed Interface",
+        "var": "DateTimeInterface"
+    },
+    {
+        "key": "typed-namespace",
+        "name": "Typed namespace",
+        "var": "\\App\\Type\\Test"
+    },
+    {
+        "key": "typed-string-default",
+        "name": "Typed string with default",
+        "var": "string"
+    },
+    {
+        "key": "typed-int-default",
+        "name": "Typed Int with default",
+        "var": "integer"
+    },
+    {
+        "key": "typed-string-nullable",
+        "name": "Nullable typed string",
+        "var": "string|null"
+    },
+    {
+        "key": "typed-interface-nullable",
+        "name": "Nullable typed inteface",
+        "var": "DateTimeInterface|null"
+    },
+    {
+        "key": "typed-namespace-nullable",
+        "name": "Nullable typed namespace",
+        "var": "\\App\\Type\\Test|null",
+        "config": {
+            "qualifyClassNames": true
+        }
+    },
+    {
+        "key": "union-type-simple",
+        "name": "Simple PHP8 union type",
+        "var": "string|array"
+    },
+    {
+        "key": "union-type-namespace",
+        "name": "PHP8 union type with one namespace",
+        "var": "string|\\DateTimeInterface"
+    },
+    {
+        "key": "union-type-full-namespace",
+        "name": "PHP8 union type with one namespace",
+        "var": "string|\\App\\Type\\Test"
+    },
+    {
+        "key": "union-type-nullable",
+        "name": "PHP8 union type that can be null",
+        "var": "string|array|null"
+    }
+]

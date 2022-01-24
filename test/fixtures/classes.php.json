@@ -1,0 +1,54 @@
+[
+    {
+        "key": "simple",
+        "name": "Simple"
+    },
+    {
+        "key": "interface",
+        "name": "Interface"
+    },
+    {
+        "key": "trait",
+        "name": "Trait"
+    },
+    {
+        "key": "final",
+        "name": "Final"
+    },
+    {
+        "key": "abstract",
+        "name": "Abstract"
+    },
+    {
+        "key": "extends",
+        "name": "Extends"
+    },
+    {
+        "key": "implements",
+        "name": "Implements"
+    },
+    {
+        "key": "extends-implements",
+        "name": "Extends and Implements"
+    },
+    {
+        "key": "multiline",
+        "name": "Multiline implementation"
+    },
+    {
+        "key": "complex",
+        "name": "Abstract extension with multline implementation"
+    },
+    {
+        "key": "extends-namespace",
+        "name": "Extend a class with a namespace"
+    },
+    {
+        "key": "implements-namespace",
+        "name": "Implement a class with a namespace"
+    },
+    {
+        "key": "extends-implements-namespace",
+        "name": "Implement and implmentes classes with a namespaces"
+    }
+]
