@@ -45,6 +45,10 @@ export default class Tags
 			tag: '@ORM\\GeneratedValue',
 			snippet: '@ORM\\\\GeneratedValue'
 		},
+		{
+			tag: '@ORM\\Entity(repositoryClass=NameRepository::class)',
+			snippet: '@ORM\\\\Entity(repositoryClass=${1}Repository::class)'
+		},
 	]
 
     /**
